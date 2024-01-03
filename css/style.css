@@ -654,20 +654,22 @@ figcaption.caption p {
     article {
         flex-direction: row; /* Cambia a disposición horizontal en pantallas más grandes */
         flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
-        width:auto;
-        
+        width: auto; 
       }
 
       .hero-text {
         width: 100%;
-
       }  
 
    
-      .row2,.row3, .row4, .row5 {
+      .row2, .row4  {
           display: flex;
-          flex-direction: column-reverse; 
-        
+          flex-direction: column; 
+        }
+
+     .row3, .row5 {
+          display: flex;
+          flex-direction: column-reverse;    
         }
       
         .texto {
@@ -680,16 +682,13 @@ figcaption.caption p {
       
    
     .imagen-rotada {
-        height: auto;
-        transform-origin: top left;
         transform: rotate(-0deg); 
     }
 
     .imagen-rotada img {
-        width: 100%;
-        height: auto;
-    }
-
+      width: 100%;
+      height: auto;
+  }
 
 
       .texto {
