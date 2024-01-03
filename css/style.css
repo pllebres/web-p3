@@ -663,13 +663,7 @@ figcaption.caption p {
 
       }  
 
-      .row1{
-        padding: 4rem 4vw;
-          grid-template-columns: 1fr !important;
-      }
-  
    
-
       .row2,.row3, .row4, .row5 {
           display: flex;
           flex-direction: column-reverse; 
