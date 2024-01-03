@@ -16,6 +16,8 @@ em {
   font-style: italic;
 }
 
+* { margin: 0; padding: 0; } 
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -35,8 +37,6 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -76,6 +76,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+  width: 100%;
 }
 table.newsletter-table {
     width: 100%;
@@ -219,23 +220,19 @@ h2 {
 
 
 .row2, .row4 {
-    height: 20rem;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 5vw;
-    padding: 2rem 16vw;
+  height: 20rem;
+  display: flex;
+  flex-direction: row; /* Por defecto, flex-direction es row en flexbox */
+  gap: 5vw; /* En flexbox no hay gap, se puede manejar con márgenes o paddings */
+  padding: 2rem 16vw;
 }
-
 .row3, .row5 {
-    height: 20rem;
-    height: auto;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 5vw;
-    padding: 2rem 16vw;
+  height: 20rem;
+  display: flex;
+  flex-direction: row; /* Por defecto, flex-direction es row en flexbox */
+  gap: 5vw; /* En flexbox no hay gap, se puede manejar con márgenes o paddings */
+  padding: 2rem 16vw;
 }
-
 
 .container  {
     background-color:  var(--light-contrast-color);
@@ -592,10 +589,7 @@ figcaption.caption p {
         font-weight: 900;
         line-height: 1.2em;
     }
-.row1{
-      grid-template-columns: 1fr; /* Cambia a una columna en pantallas más pequeñas */
-      padding: 2rem 8vw; /* Relleno vertical + horizontal relativo al ancho de la ventana */
-    }
+
 
     .footer ul{
     padding-top: 91px;
@@ -652,7 +646,7 @@ figcaption.caption p {
 @media screen and (max-width: 480px) {
 
     article {
-        flex-direction: row; /* Cambia a disposición horizontal en pantallas más grandes */
+        flex-direction: column; /* Cambia a disposición horizontal en pantallas más grandes */
         flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
         width: auto; 
       }
@@ -661,22 +655,30 @@ figcaption.caption p {
         flex-direction: column; 
       }  
 
-
       .hero-text {
         width: 100%;
+        padding: 0;
       }  
 
-   
-      .row2, .row4  {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
+      .row2, .row4, .row3, .row5 {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 5vw;
+        padding: 2rem 7vw;
+      }
+      .row1 {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        padding: 5px;
         }
-
-     .row3, .row5 {
-      display: grid;
-      grid-template-columns: 1fr 3fr;  
+    
+        h1, .col1, .col2  {
+          margin: 16px;
         }
-      
+    
         .texto {
           order: 1; /* Cambia el orden del texto */
         }
@@ -695,14 +697,12 @@ figcaption.caption p {
       height: auto;
   }
 
-
       .texto {
         padding-top: 0rem;
     } 
     h2 {
         font-size: 1.5em;
     }
-
 
       /* Cambia el orden de aparición de los elementos */
       .texto {
@@ -713,19 +713,8 @@ figcaption.caption p {
         grid-area: imagen;
       }
     
-    .imagen-rotada-right {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más grandes */
-        gap: 10px;
-    }
-    
-    .imagen-rotada-right img {
-        width: 100%;
-        grid-column: 2; /* Ubica la imagen en la segunda columna en pantallas más grandes */
-      }
-      .texto-left {
-        grid-column: 1; /* Ubica el texto en la primera columna en pantallas más grandes */
-      }
+
+      
       footer {
         display: flex;
         flex-direction: column;
@@ -817,4 +806,7 @@ figcaption.caption p {
     gap: 6px;
     padding: 1rem;
   }
-    }
+
+
+
+  }
