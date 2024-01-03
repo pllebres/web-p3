@@ -582,7 +582,7 @@ figcaption.caption p {
 }
 
 /* Cuando tengamos como mínimo 768px en el viewport, interesará que los elementos con estas clases se muestre el uno al lado del otro y adapten su anchura*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
     .hero-text {
         padding-left: 3rem;
         width: 17rem;
