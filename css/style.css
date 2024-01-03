@@ -668,13 +668,13 @@ figcaption.caption p {
 
    
       .row2, .row4  {
-          display: flex;
-          flex-direction: column; 
+        display: grid;
+        grid-template-columns: 1fr 3fr;
         }
 
      .row3, .row5 {
-          display: flex;
-          flex-direction: column-reverse;    
+      display: grid;
+      grid-template-columns: 1fr 3fr;  
         }
       
         .texto {
