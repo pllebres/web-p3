@@ -582,7 +582,7 @@ figcaption.caption p {
 }
 
 /* Cuando tengamos como mínimo 768px en el viewport, interesará que los elementos con estas clases se muestre el uno al lado del otro y adapten su anchura*/
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .hero-text {
         padding-left: 3rem;
         width: 17rem;
@@ -649,7 +649,7 @@ figcaption.caption p {
 }
 /* móvil **/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
 
     article {
         flex-direction: row; /* Cambia a disposición horizontal en pantallas más grandes */
@@ -665,7 +665,7 @@ figcaption.caption p {
 
       .row1{
         padding: 4rem 4vw;
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr !important;
       }
   
    
@@ -705,10 +705,7 @@ figcaption.caption p {
         font-size: 1.5em;
     }
 
-    .row3, .row5 {
-        grid-template-areas: "texto imagen";
-      }
-    
+
       /* Cambia el orden de aparición de los elementos */
       .texto {
         grid-area: texto;
