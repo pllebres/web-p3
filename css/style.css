@@ -643,7 +643,7 @@ figcaption.caption p {
 }
 /* móvil **/
 
-@media screen and (max-width: 480px) {
+@media (min-width: 576px) {
 
     article {
         flex-direction: column; /* Cambia a disposición horizontal en pantallas más grandes */
