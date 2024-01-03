@@ -662,23 +662,18 @@ figcaption.caption p {
 
       .row2, .row4, .row3, .row5 {
         height: auto;
-        display: -webkit-flex;
         display: flex;
-        -webkit-flex-direction: column-reverse;
         flex-direction: column-reverse;
         gap: 5vw;
         padding: 2rem 7vw;
       }
-      
       .row1 {
         height: auto;
-        display: -webkit-flex;
         display: flex;
-        -webkit-flex-direction: column;
         flex-direction: column;
         gap: 1vw;
         padding: 5px;
-      }
+        }
     
         h1, .col1, .col2  {
           margin: 16px;
