@@ -665,18 +665,12 @@ figcaption.caption p {
 
       .row1{
         padding: 4rem 4vw;
-      }
-  
-    
-      .row2, .row4 {
-        display: flex;
-          flex-direction: column; 
-
           grid-template-columns: 1fr;
       }
+  
+   
 
-
-        .row3, .row5 {
+      .row2,.row3, .row4, .row5 {
           display: flex;
           flex-direction: column-reverse; /* Cambia el orden en pantallas pequeñas */
 
@@ -702,12 +696,6 @@ figcaption.caption p {
         width: 100%;
         height: auto;
     }
-    .row1, .row2, .row3, .row4, .row5{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px; /* Espacio entre cada sección */
-      }
-
 
 
 
