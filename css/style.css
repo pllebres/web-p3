@@ -662,23 +662,18 @@ figcaption.caption p {
 
       .row2, .row4, .row3, .row5 {
         height: auto;
-        display: -webkit-flex;
         display: flex;
-        -webkit-flex-direction: column-reverse;
         flex-direction: column-reverse;
         gap: 5vw;
         padding: 2rem 7vw;
       }
-      
       .row1 {
         height: auto;
-        display: -webkit-flex;
         display: flex;
-        -webkit-flex-direction: column;
         flex-direction: column;
         gap: 1vw;
         padding: 5px;
-      }
+        }
     
         h1, .col1, .col2  {
           margin: 16px;
@@ -746,13 +741,7 @@ figcaption.caption p {
         grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: auto;
       }
-
-      .boxes {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 6px;
-        padding: 1rem;
-      }
+      
       
       .box1 {
         grid-column-start: 1;
@@ -811,7 +800,12 @@ figcaption.caption p {
   }
 
 
-
+  .boxes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 6px;
+    padding: 1rem;
+  }
 
 
 
