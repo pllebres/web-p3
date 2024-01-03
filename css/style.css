@@ -657,6 +657,11 @@ figcaption.caption p {
         width: auto; 
       }
 
+      .hero {
+        flex-direction: column; 
+      }  
+
+
       .hero-text {
         width: 100%;
       }  
