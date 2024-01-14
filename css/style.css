@@ -82,7 +82,7 @@ table.newsletter-table {
     width: 100%;
 }
 input#nombre, input#email {
-    width: 24rem;
+    width: 100%;
     border: var(--light-contrast-color) !important;
     border-radius: 5px 5px;
     border-width: 1px;
