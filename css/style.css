@@ -261,7 +261,7 @@ article {
   
 .imagen-rotada{
     position: relative;
-    width: auto /* Ajusta la imagen al ancho del contenedor */
+    width: auto; /* Ajusta la imagen al ancho del contenedor */
     height: auto; /* Altura automática */
     transform-origin: top left; /* Establece el origen de la rotación en la esquina inferior derecha */
     transform: rotate(-2deg); /* Rota la imagen  */
@@ -651,6 +651,7 @@ figcaption.caption p {
         width: auto; 
       }
 
+
       .hero {
         flex-direction: column; 
       }  
@@ -659,6 +660,10 @@ figcaption.caption p {
         width: 100%;
         padding: 0;
       }  
+
+      .row1 {
+      width: 100%;
+    }  
 
       .row2, .row4, .row3, .row5 {
         height: auto;
@@ -806,7 +811,7 @@ figcaption.caption p {
     }
 
     h1, .col1, .col2  {
-      margin: 16px;
+      padding: 16px;
     }
 
   }
