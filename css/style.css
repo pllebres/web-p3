@@ -667,10 +667,16 @@ figcaption.caption p {
 
       .row1 {
       width: 100%;
-    }  
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      padding: 0;
+      }
+  
 
       .row2, .row4, .row3, .row5 {
-        min-height: 44rem;
+     
         display: flex;
         flex-direction: column-reverse;
         gap: 5vw;
@@ -810,13 +816,6 @@ figcaption.caption p {
     padding: 1rem;
   }
 
-  .row1 {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1vw;
-    padding: 0;
-    }
 
     h1, .col1, .col2  {
       padding: 16px;
