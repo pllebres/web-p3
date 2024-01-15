@@ -271,7 +271,6 @@ article {
   }
   .imagen-rotada img {
     width: 16rem; /* Ajusta la imagen al ancho del contenedor */
-    height: auto; /* Altura automática */
   }
   figcaption {
     font-size: 0.6em;
@@ -679,13 +678,12 @@ figcaption.caption p {
         flex-direction: column-reverse;
         gap: 4vw;
         padding: 0;
-        margin: 1rem;
-        overflow: hidden;
+        margin: 0rem 0.5rem 0rem 0.5rem;
         min-height: 53rem;
 
       }
 
-      
+
         .texto {
           order: 1; /* Cambia el orden del texto */
         }
