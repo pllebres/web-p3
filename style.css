@@ -16,6 +16,8 @@ em {
   font-style: italic;
 }
 
+* { margin: 0; padding: 0; } 
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -35,8 +37,6 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -76,12 +76,13 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+  width: 100%;
 }
 table.newsletter-table {
     width: 100%;
 }
 input#nombre, input#email {
-    width: 24rem;
+    width: 100%;
     border: var(--light-contrast-color) !important;
     border-radius: 5px 5px;
     border-width: 1px;
@@ -108,19 +109,22 @@ input[type="submit"], button {
 input[type="submit"]:hover, button:hover {
     background-color: rgb(191, 12, 240); 
 }
-p.pdatos {
-    font-size: 0.6em;
-}
+
 * { margin: 0; padding: 0; }
 
 body {
     background-color: rgb(247, 247, 247);
   }
+
   p {
     color: rgb(0, 59, 74);
     line-height: 1.5em;
     padding-bottom: 0.8em;
     font-size: 0.9em;
+}
+
+p.pdatos {
+  font-size: 0.6em;
 }
 
 /* Estilos para el encabezado */
@@ -219,23 +223,19 @@ h2 {
 
 
 .row2, .row4 {
-    height: 20rem;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 5vw;
-    padding: 2rem 16vw;
+  height: 20rem;
+  display: flex;
+  flex-direction: row; /* Por defecto, flex-direction es row en flexbox */
+  gap: 5vw; /* En flexbox no hay gap, se puede manejar con márgenes o paddings */
+  padding: 2rem 16vw;
 }
-
 .row3, .row5 {
-    height: 20rem;
-    height: auto;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 5vw;
-    padding: 2rem 16vw;
+  height: 20rem;
+  display: flex;
+  flex-direction: row; /* Por defecto, flex-direction es row en flexbox */
+  gap: 5vw; /* En flexbox no hay gap, se puede manejar con márgenes o paddings */
+  padding: 2rem 16vw;
 }
-
 
 .container  {
     background-color:  var(--light-contrast-color);
@@ -264,7 +264,7 @@ article {
   
 .imagen-rotada{
     position: relative;
-    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    width: auto; /* Ajusta la imagen al ancho del contenedor */
     height: auto; /* Altura automática */
     transform-origin: top left; /* Establece el origen de la rotación en la esquina inferior derecha */
     transform: rotate(-2deg); /* Rota la imagen  */
@@ -592,10 +592,7 @@ figcaption.caption p {
         font-weight: 900;
         line-height: 1.2em;
     }
-.row1{
-      grid-template-columns: 1fr; /* Cambia a una columna en pantallas más pequeñas */
-      padding: 2rem 8vw; /* Relleno vertical + horizontal relativo al ancho de la ventana */
-    }
+
 
     .footer ul{
     padding-top: 91px;
@@ -649,40 +646,38 @@ figcaption.caption p {
 }
 /* móvil **/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
 
     article {
-        flex-direction: row; /* Cambia a disposición horizontal en pantallas más grandes */
+        flex-direction: column; /* Cambia a disposición horizontal en pantallas más grandes */
         flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
-        width:auto;
-        
+        width: auto; 
       }
+
+
+      .hero {
+        flex-direction: column; 
+        min-height: 21rem;
+      }  
 
       .hero-text {
         width: 100%;
-
+        padding: 0;
       }  
 
-      .row1{
-        padding: 4rem 4vw;
-      }
-  
-    
-      .row2, .row4 {
+      .row1 {
+      width: 100%;
+    }  
+
+      .row2, .row4, .row3, .row5 {
+        min-height: 44rem;
         display: flex;
-          flex-direction: column; 
-
-          grid-template-columns: 1fr;
+        flex-direction: column-reverse;
+        gap: 5vw;
+        padding: 2rem 7vw;
       }
 
-
-        .row3, .row5 {
-          display: flex;
-          flex-direction: column-reverse; /* Cambia el orden en pantallas pequeñas */
-
-          grid-template-columns: 1fr;
-        }
-      
+    
         .texto {
           order: 1; /* Cambia el orden del texto */
         }
@@ -693,23 +688,13 @@ figcaption.caption p {
       
    
     .imagen-rotada {
-        height: auto;
-        transform-origin: top left;
         transform: rotate(-0deg); 
     }
 
     .imagen-rotada img {
-        width: 100%;
-        height: auto;
-    }
-    .row1, .row2, .row3, .row4, .row5{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px; /* Espacio entre cada sección */
-      }
-
-
-
+      width: 100%;
+      min-height: 21rem;
+  }
 
       .texto {
         padding-top: 0rem;
@@ -718,10 +703,6 @@ figcaption.caption p {
         font-size: 1.5em;
     }
 
-    .row3, .row5 {
-        grid-template-areas: "texto imagen";
-      }
-    
       /* Cambia el orden de aparición de los elementos */
       .texto {
         grid-area: texto;
@@ -731,19 +712,8 @@ figcaption.caption p {
         grid-area: imagen;
       }
     
-    .imagen-rotada-right {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más grandes */
-        gap: 10px;
-    }
-    
-    .imagen-rotada-right img {
-        width: 100%;
-        grid-column: 2; /* Ubica la imagen en la segunda columna en pantallas más grandes */
-      }
-      .texto-left {
-        grid-column: 1; /* Ubica el texto en la primera columna en pantallas más grandes */
-      }
+
+      
       footer {
         display: flex;
         flex-direction: column;
@@ -804,6 +774,10 @@ figcaption.caption p {
         margin-left: 6rem;
     }
 
+    .blog-article {
+      margin: 0.5rem;
+    }
+
     .videoteca{
         display: grid;
         grid-template-columns: 1fr;
@@ -835,4 +809,17 @@ figcaption.caption p {
     gap: 6px;
     padding: 1rem;
   }
+
+  .row1 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 0px;
     }
+
+    h1, .col1, .col2  {
+      padding: 16px;
+    }
+
+  }
