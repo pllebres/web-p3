@@ -675,14 +675,17 @@ figcaption.caption p {
       }
 
       .row2, .row4, .row3, .row5 {
-        min-height: 44rem;
         display: flex;
         flex-direction: column-reverse;
-        gap: 5vw;
-        padding: 2rem 7vw;
+        gap: 4vw;
+        padding: 0;
+        margin: 1rem;
+        overflow: hidden;
+        min-height: 53rem;
+
       }
 
-    
+      
         .texto {
           order: 1; /* Cambia el orden del texto */
         }
