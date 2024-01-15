@@ -599,6 +599,16 @@ figcaption.caption p {
     .footer ul{
     padding-top: 91px;
 }
+
+.row1 {
+  padding: 2rem 3vw;
+}
+
+.row3, .row5, .row2, .row4 {
+
+  padding: 2rem 4vw;
+}
+
 .colum2 {
   display: grid;
   grid-template-columns: 1fr;
