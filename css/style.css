@@ -774,6 +774,10 @@ figcaption.caption p {
         margin-left: 6rem;
     }
 
+    .blog-article {
+      margin: 0.5rem;
+    }
+
     .videoteca{
         display: grid;
         grid-template-columns: 1fr;
@@ -811,7 +815,7 @@ figcaption.caption p {
     display: flex;
     flex-direction: column;
     gap: 1vw;
-    padding: 5px;
+    padding: 0;
     }
 
     h1, .col1, .col2  {
