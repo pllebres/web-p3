@@ -667,9 +667,6 @@ figcaption.caption p {
 
       .row1 {
       width: 100%;
-    }  
-
-    .row1 {
       height: auto;
       display: flex;
       flex-direction: column;
