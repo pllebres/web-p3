@@ -222,15 +222,8 @@ h2 {
 
 
 
-.row2, .row4 {
-  height: 20rem;
-  display: flex;
-  flex-direction: row; /* Por defecto, flex-direction es row en flexbox */
-  gap: 5vw; /* En flexbox no hay gap, se puede manejar con márgenes o paddings */
-  padding: 2rem 16vw;
-}
-.row3, .row5 {
-  height: 20rem;
+.row2, .row4, .row3, .row5{
+  min-height: 15rem;
   display: flex;
   flex-direction: row; /* Por defecto, flex-direction es row en flexbox */
   gap: 5vw; /* En flexbox no hay gap, se puede manejar con márgenes o paddings */
@@ -291,6 +284,16 @@ figcaption a {
   .logo-footer p {
     color: #fff;
 }
+footer li, .logo-footer p {
+  font-size: 0.8em;
+
+}
+
+footer li {
+
+  margin-left: 0.8rem;
+}
+
   legend {
     padding-top: 1.2rem;
     font-size: 0.8em;
@@ -679,10 +682,12 @@ figcaption.caption p {
         gap: 4vw;
         padding: 0;
         margin: 0rem 0.5rem 0rem 0.5rem;
-        min-height: 53rem;
+        min-height: 50rem;
 
       }
-
+      .container {
+        padding-bottom: 2rem;
+      }
 
         .texto {
           order: 1; /* Cambia el orden del texto */
