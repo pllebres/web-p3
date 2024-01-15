@@ -604,9 +604,8 @@ figcaption.caption p {
   padding: 2rem 3vw;
 }
 
-.row3, .row5, .row2, .row4 {
-
-  padding: 2rem 4vw;
+.row3, .row2, .row4 .row5,{
+  padding: 2rem 2vw;
 }
 
 .colum2 {
