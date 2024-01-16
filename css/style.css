@@ -92,7 +92,7 @@ input#nombre, input#email {
     margin-bottom: 0.7em;
     margin-top: 0.7em;
     border-style: solid;
-    color: var(--light-contrast-color);
+    color: var(--text-grey-color);
 
 }
 input[type="submit"], button {
@@ -123,10 +123,14 @@ body {
     font-size: 0.9em;
 }
 
-p.letra {
+p.letra, .col2 label span{
   font-size: 0.6em;
 }
-
+label {
+  display: inline-block;
+  white-space: nowrap;
+  width: 100%;
+}
 .letra a {
   color: rgb(191, 12, 240);
 }
