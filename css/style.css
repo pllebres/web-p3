@@ -123,8 +123,12 @@ body {
     font-size: 0.9em;
 }
 
-p.pdatos {
+p.letra {
   font-size: 0.6em;
+}
+
+.letra a {
+  color: rgb(191, 12, 240);
 }
 
 /* Estilos para el encabezado */
