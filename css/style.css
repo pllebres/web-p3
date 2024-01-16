@@ -294,6 +294,10 @@ figcaption a {
   margin-left: 0.8rem;
 }
 
+footer b {
+  margin-left: 10px;
+}
+
   legend {
     padding-top: 1.2rem;
     font-size: 0.8em;
@@ -451,15 +455,6 @@ figcaption a {
     justify-content: center;
   }
   
-.blog-nav li {
-  margin-right: -14px;
-  background-color: #fff;
-  color: #333;
-  padding: 9px 0px;
-  border-radius: 5px;
-  border: 1px solid gray;
-}
-  
   .blog-nav a {
     text-decoration: none;
     color: #333;
@@ -597,8 +592,25 @@ figcaption.caption p {
 
 
     .footer ul{
-    padding-top: 91px;
-}
+      padding-top: 91px;
+    }
+    
+    .footer li {
+    margin-left: 0.8rem;
+    width: 100%;
+    }
+    footer {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-footer {
+      text-align: center;
+      padding-bottom: 1em;
+    }
+    .rrss {
+      justify-content: center;
+    }
+    
 
 .row1 {
   padding: 2rem 3vw;
@@ -814,9 +826,11 @@ figcaption.caption p {
         padding: 1rem;
     }
     .entrada {
-      padding: 4rem 2vw;
+      padding: 0rem 2vw;
   }
-  
+  .copy figure.image-container {
+    max-height: 24rem;
+  }
 
   .rrss {
     justify-content: center;
