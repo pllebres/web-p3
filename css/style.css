@@ -137,18 +137,16 @@ label {
 
 /* Estilos para el encabezado */
 
-.header {
+  .header {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
     box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    position: fixed;
+    background-color: #fff; 
+    position: relative; /* Asegúrate de que la posición sea relativa o absoluta */
     padding-bottom: 0.8rem;
-    width: 100%;
-    z-index: 100;
-
-}
+  
+  }
 
   
   .logo .logo-img {
@@ -161,7 +159,9 @@ label {
   nav {
    padding-right: 20px;
   }
-  
+  nav a:hover {
+    color: rgb(191, 12, 240);
+  }
 
   ul {
     list-style: none;
@@ -197,7 +197,6 @@ label {
     justify-content: left; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     /* Otras propiedades de estilo para el hero */
-    margin-top: 77px;
 
 }
 .hero-text {
@@ -408,14 +407,11 @@ footer b {
   }
 
 
-
-.blog {
+  .blog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     gap: 1rem;
-    margin-top: 40px;
-
   }
 
   figure.image-container img {
@@ -521,7 +517,6 @@ iframe {
 }
 .entrada {
     padding: 1rem 16vw;
-    margin-top: 85px;
 }
 
 .colum2 {
@@ -648,7 +643,6 @@ figcaption.caption p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.3rem;
-  margin-top: 50px;
 }
 
 
