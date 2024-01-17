@@ -143,8 +143,10 @@ label {
     align-items: center;
     box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1);
     background-color: #fff; 
-    position: relative; /* Asegúrate de que la posición sea relativa o absoluta */
+    position: fixed;
     padding-bottom: 0.8rem;
+    z-index:100;
+    width:100%;
   
   }
 
@@ -198,7 +200,14 @@ label {
     align-items: center; /* Centrar verticalmente */
     /* Otras propiedades de estilo para el hero */
 
+    margin-top: 76px;
+
 }
+
+.blog-article h2 {
+  margin-top: 94px;
+}
+
 .hero-text {
     padding-left: 16%;
     width: 37rem;
@@ -516,7 +525,8 @@ iframe {
     color: #999;
 }
 .entrada {
-    padding: 1rem 16vw;
+  padding: 1rem 16vw;
+  margin-top: 80px;
 }
 
 .colum2 {
@@ -839,9 +849,11 @@ figcaption.caption p {
       .copy {
         padding: 1rem;
     }
+ 
     .entrada {
-      padding: 0rem 2vw;
-  }
+      padding: 1rem 16vw;
+    }
+
   .copy figure.image-container {
     max-height: 24rem;
   }
