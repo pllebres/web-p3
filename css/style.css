@@ -147,7 +147,7 @@ label {
     padding-bottom: 0.8rem;
     width: 100%;
     z-index: 100;
-margin-top: 77px;
+
 }
 
   
@@ -197,6 +197,7 @@ margin-top: 77px;
     justify-content: left; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     /* Otras propiedades de estilo para el hero */
+    margin-top: 77px;
 
 }
 .hero-text {
