@@ -137,16 +137,17 @@ label {
 
 /* Estilos para el encabezado */
 
-  .header {
+.header {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
     box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1);
-    background-color: #fff; 
-    position: relative; /* Asegúrate de que la posición sea relativa o absoluta */
+    background-color: #fff;
+    position: fixed;
     padding-bottom: 0.8rem;
-  
-  }
+    width: 100%;
+    z-index: 100;
+}
 
   
   .logo .logo-img {
