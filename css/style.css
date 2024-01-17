@@ -406,11 +406,14 @@ footer b {
   }
 
 
-  .blog {
+
+.blog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     gap: 1rem;
+    margin-top: 40px;
+}
   }
 
   figure.image-container img {
@@ -516,6 +519,7 @@ iframe {
 }
 .entrada {
     padding: 1rem 16vw;
+    margin-top: 85px;
 }
 
 .colum2 {
@@ -642,6 +646,7 @@ figcaption.caption p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.3rem;
+  margin-top: 50px;
 }
 
 
